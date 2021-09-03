@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1, .container2{
+            display: flex;           
+        }
+
+        .box{
+            padding: 1rem;
+            margin: 1rem;
+            background: coral;
+            color: cornsilk;
+        }
+        .b1{
+            /* oddset-x | offset-y | color */
+            box-shadow: 10px 10px teal;
+        }
+        .b2{
+
+            /* oddset-x | offset-y | blur-radius |color */
+            box-shadow: 5px 5px 20px teal;
+        }
+        .b3{   
+            /* Negative Value */
+            box-shadow: -5px -5px 20px teal;
+        }
+        .b4{  
+            /* offset-x | offset-y | blur-radius |
+             spread-radius | color -- -- */
+            box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3);
+        }
+        .b5{
+            /* inset | offset-x | offset-y | color -- --*/
+            box-shadow: inset -3px -3px teal;
+        }
+        .b6{
+            /* Multiple shadow */
+            box-shadow: 3px 3px 10px teal, -3px -3px 10px olive;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+
+        <div class="box b1">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni, ipsum saepe. Sequi et neque nisi?
+            </p>
+        </div>
+        <div class="box b2">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni, ipsum saepe. Sequi et neque nisi?
+            </p>
+        </div>
+        <div class="box b3">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni, ipsum saepe. Sequi et neque nisi?
+            </p>
+        </div>
+
+    </div>
+
+    <div class="container2">
+
+        <div class="box b4">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni, ipsum saepe. Sequi et neque nisi?
+            </p>
+        </div>
+        <div class="box b5">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni, ipsum saepe. Sequi et neque nisi?
+            </p>
+        </div>
+        <div class="box b6">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magni, ipsum saepe. Sequi et neque nisi?
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -11,7 +11,7 @@
 </head>
 <body id="home">
     <header class="hero">
-        <div id="navbar" class="navbar" >
+        <div id="navbar" class="navbar top" >
             <h1 class="logo">
                 <span class="text-primary"><i class="fas fa-book-open"></i>
                 Blog</span>It
@@ -210,6 +210,47 @@
         </div>
         <p>Copyright &copy; 2021 - Created by Urvashi Harode</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function(){
+            if(window.pageYOffset > 100){
+                navbar.classList.remove('top');
+                if(!scrolled){
+                    navbar.style.transform = 'translate(-7opx)';
+                }
+                setTimeout(function() {
+                    navabr.style.transform = 'translateY(0)';
+                    scrolled = true;
+                }, 200);
+            }else{
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        }
+
+        //smooth scrolling
+        $('#navbar a, .btn').on('click', function (e) {
+            if(this.hash !== ''){
+                e.preventDefault();
+                const hash = this.hash;
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top - 100,
+                    },
+                    800
+                );
+            }
+        });
+
+    </script>
 </body>
 </html>
 
